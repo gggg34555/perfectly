@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "qwert";
+  src: url(./fonts/Raleway-ExtraBold.woff);
+}
+@font-face {
+  font-family: "qwerty";
+  src: url(./fonts/Raleway-Regular.woff2);
+}
+* *::before *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  overflow: hidden;
+  min-width: 800px;
+  margin: 0;
+  position: relative;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+.text {
+  width: 730px;
+  height: 400px;
+  top: 60px;
+  left: 431px;
+  font-size: 116px;
+  font-weight: 800;
+  line-height: 136.18px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 300px;
+  font-family: "qwert";
+}
+.text:hover {
+  color: #4c4c4c;
+}
+.text::after {
+  content: "*";
+}
+.text:hover::before {
+  position:absolute;
+  font-family: "qwerty";
+  transform: translate(29%, 80%);
+  background-color: white;
+  border: 2px solid #000000;
+  border-bottom: 11px solid #000000;
+  border-radius: 20px;
+  padding: 35px;
+  content:"На самом деле нет.\AВажнее &mdash; научиться ошибаться.";
+  text-align: left;
+  line-height: 35px;
+  white-space: pre; 
+  width: 44vw;
+  min-width: 100px;
+  height: auto;
+  margin-right: 20px;
+  font-size: 1.8vw;
+}
+.text::after {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+.text:hover::after {
+  opacity: 1;
+}
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+video {
+  opacity: 1;
+}
+.text:hover ~ video {
+  opacity: 0.2;
+}
