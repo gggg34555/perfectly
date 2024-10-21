@@ -48,7 +48,7 @@ body {
 .text:hover::before {
   position:absolute;
   font-family: "qwerty";
-  transform: translate(29%, 80%);
+  transform: translate(27%, 80%);
   background-color: white;
   border: 2px solid #000000;
   border-bottom: 11px solid #000000;
@@ -58,11 +58,11 @@ body {
   text-align: left;
   line-height: 35px;
   white-space: pre; 
-  width: 44vw;
+  width: 44%;
   min-width: 100px;
   height: auto;
-  margin-right: 20px;
-  font-size: 1.8vw;
+  margin-right: 30px;
+  font-size: 1.65vw;
 }
 .text::after {
   width: 100%;
